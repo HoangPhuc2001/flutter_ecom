@@ -5,7 +5,8 @@ class Product {
   final String title, description;
   final List<String> images;
   final List<Color> colors;
-  final double rating, price;
+  final double rating;
+  final String price;
   final bool isFavourite, isPopular;
 
   Product({
@@ -38,8 +39,8 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Wireless Controller for PS4™",
-    price: 64.99,
+    title: "Bộ điều khiển không dây cho PS4™",
+    price: "1.200.000",
     description: description,
     rating: 4.8,
     isFavourite: true,
@@ -57,9 +58,9 @@ List<Product> demoProducts = [
       Colors.white,
     ],
     title: "Nike Sport White - Man Pant",
-    price: 50.5,
+    price: "1.000.000",
     description: description,
-    rating: 4.1,
+    rating: 4.2,
     isPopular: true,
   ),
   Product(
@@ -73,8 +74,8 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Gloves XC Omega - Polygon",
-    price: 36.55,
+    title: "Găng tay XC Omega - Đa giác",
+    price: "600.000",
     description: description,
     rating: 4.1,
     isFavourite: true,
@@ -91,13 +92,13 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Logitech Head",
-    price: 20.20,
+    title: "Tai Nghe Logitech",
+    price: "2.000.000",
     description: description,
-    rating: 4.1,
+    rating: 4.8,
     isFavourite: true,
   ),
 ];
 
 const String description =
-    "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";
+    "Bộ điều khiển không dây dành cho PS4 ™ mang đến cho bạn những gì bạn muốn trong quá trình chơi trò chơi của mình từ kiểm soát chính xác trò chơi đến chia sẻ…";

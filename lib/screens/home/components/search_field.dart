@@ -20,12 +20,12 @@ class SearchField extends StatelessWidget {
         onChanged: (value) => print(value),
         decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
-                horizontal: getProportionateScreenWidth(20),
+                horizontal: getProportionateScreenWidth(15),
                 vertical: getProportionateScreenWidth(9)),
             border: InputBorder.none,
             focusedBorder: InputBorder.none,
             enabledBorder: InputBorder.none,
-            hintText: "Search product",
+            hintText: "Tìm kiếm sản phẩm",
             prefixIcon: Icon(Icons.search)),
       ),
     );
