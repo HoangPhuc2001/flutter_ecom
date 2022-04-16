@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Product.dart';
-import 'Product.dart';
+import 'ColorProduct.dart';
+import 'ColorProduct.dart';
 
 class Cart {
   final Product product;
@@ -15,6 +15,5 @@ class Cart {
 List<Cart> demoCarts = [
   Cart(product: demoProducts[0], numOfItem: 2),
   Cart(product: demoProducts[1], numOfItem: 1),
-  Cart(product: demoProducts[3], numOfItem: 1),
-  Cart(product: demoProducts[2], numOfItem: 2),
+  Cart(product: demoProducts[3], numOfItem: 3),
 ];

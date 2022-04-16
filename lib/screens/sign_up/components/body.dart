@@ -45,7 +45,7 @@ class Body extends StatelessWidget {
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),
                 Text(
-                  'Bằng cách tiếp tục xác nhận rằng bạn đồng ý \nvới Điều khoản và Điều kiện của chúng tôi',
+                  'Bằng cách đăng ký xác nhận rằng bạn đồng ý \nvới Điều khoản và Điều kiện của chúng tôi',
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.caption,
                 )

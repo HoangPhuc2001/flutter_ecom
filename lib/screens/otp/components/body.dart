@@ -17,10 +17,10 @@ class Body extends StatelessWidget {
             children: [
               SizedBox(height: SizeConfig.screenHeight * 0.05),
               Text(
-                "OTP Verification",
+                "Xác minh OTP",
                 style: headingStyle,
               ),
-              Text("We sent your code to +1 898 860 ***"),
+              Text("Chúng tôi đã gửi mã của bạn tới +1 898 860 ***"),
               buildTimer(),
               OtpForm(),
               SizedBox(height: SizeConfig.screenHeight * 0.1),
@@ -29,8 +29,10 @@ class Body extends StatelessWidget {
                   // OTP code resend
                 },
                 child: Text(
-                  "Resend OTP Code",
-                  style: TextStyle(decoration: TextDecoration.underline),
+                  "Gửi lại mã OTP",
+                  style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: kPrimaryColor),
                 ),
               )
             ],

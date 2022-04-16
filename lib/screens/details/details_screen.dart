@@ -1,6 +1,7 @@
+import 'package:apptest/models/Product.dart';
 import 'package:flutter/material.dart';
 
-import '../../models/Product.dart';
+import '../../models/ColorProduct.dart';
 import 'components/body.dart';
 import 'components/custom_app_bar.dart';
 
@@ -23,7 +24,7 @@ class DetailsScreen extends StatelessWidget {
 }
 
 class ProductDetailsArguments {
-  final Product product;
+  final ProductApi product;
 
   ProductDetailsArguments({required this.product});
 }

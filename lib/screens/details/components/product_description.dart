@@ -1,6 +1,7 @@
+import 'package:apptest/models/Product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:apptest/models/Product.dart';
+import 'package:apptest/models/ColorProduct.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -12,7 +13,7 @@ class ProductDescription extends StatelessWidget {
     this.pressOnSeeMore,
   }) : super(key: key);
 
-  final Product product;
+  final ProductApi product;
   final GestureTapCallback? pressOnSeeMore;
 
   @override
@@ -69,7 +70,7 @@ class ProductDescription extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  "See More Detail",
+                  "Xem Chi Tiết",
                   style: TextStyle(
                       fontWeight: FontWeight.w600, color: kPrimaryColor),
                 ),

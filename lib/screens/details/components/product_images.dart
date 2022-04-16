@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:apptest/models/Product.dart';
+import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -10,7 +10,7 @@ class ProductImages extends StatefulWidget {
     required this.product,
   }) : super(key: key);
 
-  final Product product;
+  final ProductApi product;
 
   @override
   _ProductImagesState createState() => _ProductImagesState();

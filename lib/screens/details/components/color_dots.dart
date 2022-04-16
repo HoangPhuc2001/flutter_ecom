@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:apptest/components/rounded_icon_btn.dart';
-import 'package:apptest/models/Product.dart';
+import 'package:apptest/models/ColorProduct.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class ColorDots extends StatelessWidget {
-  const ColorDots({
-    Key? key,
-    required this.product,
-  }) : super(key: key);
-
-  final Product product;
-
   @override
   Widget build(BuildContext context) {
     // Now this is fixed and only for demo
@@ -23,9 +16,9 @@ class ColorDots extends StatelessWidget {
       child: Row(
         children: [
           ...List.generate(
-            product.colors.length,
+            demoProducts.length,
             (index) => ColorDot(
-              color: product.colors[index],
+              color: demoProducts[index].colors[index],
               isSelected: index == selectedColor,
             ),
           ),
