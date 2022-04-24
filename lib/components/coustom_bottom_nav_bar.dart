@@ -5,6 +5,7 @@ import 'package:apptest/screens/profile/profile_screen.dart';
 
 import '../constants.dart';
 import '../enums.dart';
+import '../screens/hive/hive_screen.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
@@ -53,9 +54,14 @@ class CustomBottomNavBar extends StatelessWidget {
                 onPressed: () {},
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Chat bubble Icon.svg"),
-                onPressed: () {},
-              ),
+                  icon: SvgPicture.asset(
+                    "assets/icons/Wallet.svg",
+                    color: MenuState.hive == selectedMenu
+                        ? kPrimaryColor
+                        : inActiveIconColor,
+                  ),
+                  onPressed: () =>
+                      Navigator.pushNamed(context, HiveScreen.routeName)),
               IconButton(
                 icon: SvgPicture.asset(
                   "assets/icons/User Icon.svg",

@@ -1,3 +1,5 @@
+import 'package:apptest/screens/hive/hive_screen.dart';
+import 'package:apptest/screens/see_more_product/see_more_screen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:apptest/screens/cart/cart_screen.dart';
 import 'package:apptest/screens/complete_profile/complete_profile_screen.dart';
@@ -26,4 +28,6 @@ final Map<String, WidgetBuilder> routes = {
   DetailsScreen.routeName: (context) => DetailsScreen(),
   CartScreen.routeName: (context) => CartScreen(),
   ProfileScreen.routeName: (context) => ProfileScreen(),
+  SeeMoreScreen.routeName: (context) => SeeMoreScreen(products: fetchApi()),
+  HiveScreen.routeName: (context) => HiveScreen(),
 };

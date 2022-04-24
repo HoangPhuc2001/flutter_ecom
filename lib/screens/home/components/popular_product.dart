@@ -1,4 +1,5 @@
 import 'package:apptest/models/ColorProduct.dart';
+import 'package:apptest/screens/see_more_product/see_more_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:apptest/components/product_card.dart';
 import 'package:apptest/models/Product.dart';
@@ -19,7 +20,11 @@ class PopularProducts extends StatelessWidget {
         Padding(
           padding:
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: SectionTitle(title: "Sản phẩm phổ biến", press: () {}),
+          child: SectionTitle(
+              title: "Sản phẩm phổ biến",
+              press: () {
+                Navigator.pushNamed(context, SeeMoreScreen.routeName);
+              }),
         ),
         SizedBox(height: getProportionateScreenWidth(20)),
         //* Đổi thành ListView thay vì sử dụng SingleChildScrollView

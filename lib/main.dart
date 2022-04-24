@@ -8,8 +8,19 @@ import 'package:apptest/screens/profile/profile_screen.dart';
 import 'package:apptest/screens/splash/splash_screen.dart';
 import 'package:apptest/network/ProductNetwork.dart';
 import 'package:apptest/theme.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 
-void main() {
+import 'models/transaction.dart';
+
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Hive.initFlutter();
+
+  Hive.registerAdapter(TransactionAdapter());
+  await Hive.openBox<Transaction>('products');
+
   runApp(MyApp());
 }
 

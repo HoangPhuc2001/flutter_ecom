@@ -38,9 +38,9 @@ class SpecialOffers extends StatelessWidget {
                 press: () {},
               ),
               SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
-                category: "Fashion plus",
-                numOfBrands: 45,
+                image: "assets/images/banner_food.png",
+                category: "Foodle",
+                numOfBrands: 10,
                 press: () {},
               ),
               SizedBox(width: getProportionateScreenWidth(20)),
@@ -78,10 +78,8 @@ class SpecialOfferCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             child: Stack(
               children: [
-                Image.asset(
-                  image,
-                  fit: BoxFit.cover,
-                ),
+                Image.asset(image,
+                    fit: BoxFit.cover, width: getProportionateScreenWidth(242)),
                 Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(

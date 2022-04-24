@@ -47,7 +47,8 @@ class Body extends StatelessWidget {
                     child: const Text('Cancel'),
                   ),
                   TextButton(
-                    onPressed: () => Navigator.pushNamed(context, SignInScreen.routeName),
+                    onPressed: () =>
+                        Navigator.pushNamed(context, SignInScreen.routeName),
                     child: const Text('OK'),
                   ),
                 ],

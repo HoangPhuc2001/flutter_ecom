@@ -21,7 +21,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: getProportionateScreenWidth(20)),
+      padding: EdgeInsets.all(8),
       child: SizedBox(
         width: getProportionateScreenWidth(width),
         child: GestureDetector(
@@ -31,11 +31,13 @@ class ProductCard extends StatelessWidget {
             arguments: ProductDetailsArguments(product: product),
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               AspectRatio(
-                aspectRatio: 1.02,
+                aspectRatio: aspectRetio,
                 child: Container(
+                  width: 100.0,
+                  height: 50.0,
                   padding: EdgeInsets.all(getProportionateScreenWidth(20)),
                   decoration: BoxDecoration(
                     color: kSecondaryColor.withOpacity(0.1),
@@ -57,7 +59,7 @@ class ProductCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "\₫${this.product.price}",
+                    "\$${this.product.price}",
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(18),
                       fontWeight: FontWeight.w600,

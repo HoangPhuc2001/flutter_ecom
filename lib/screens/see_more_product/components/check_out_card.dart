@@ -77,10 +77,8 @@ class CheckoutCard extends StatelessWidget {
                 SizedBox(
                   width: getProportionateScreenWidth(190),
                   child: DefaultButton(
-                    text: "Thanh Toán",
-                    press: () {
-                      Navigator.of(context).pop();
-                    },
+                    text: "Thêm Sản Phẩm",
+                    press: () {},
                   ),
                 ),
               ],
