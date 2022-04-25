@@ -35,7 +35,7 @@ class SeeMoreScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Sản Phẩm Phổ Biến",
+          "Sản Phẩm Phổ Biến Mất",
           style: TextStyle(color: Colors.black),
         ),
       ),
