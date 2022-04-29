@@ -64,8 +64,8 @@ class _SignFormState extends State<SignForm> {
                 child: Text(
                   "Quên mật khẩu ?",
                   style: TextStyle(
-                    decoration: TextDecoration.underline,
-                    color: kPrimaryColor),
+                      decoration: TextDecoration.underline,
+                      color: kPrimaryColor),
                 ),
               )
             ],
@@ -75,18 +75,21 @@ class _SignFormState extends State<SignForm> {
           DefaultButton(
             text: "Đăng Nhập",
             press: () {
-              KeyboardUtil.hideKeyboard(context);
-              Navigator.pushNamed(context, LoginSuccessScreen.routeName);
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                // if all are valid then go to success screen
-
-              }
+              onClickSignIn();
             },
           ),
         ],
       ),
     );
+  }
+
+  onClickSignIn() {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+      // if all are valid then go to success screen
+      KeyboardUtil.hideKeyboard(context);
+      Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+    }
   }
 
   TextFormField buildPasswordFormField() {
@@ -114,8 +117,8 @@ class _SignFormState extends State<SignForm> {
       decoration: InputDecoration(
         labelText: "Password",
         hintText: "Nhập mật khẩu của bạn",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
+        // Nếu bạn đang sử dụng phiên bản mới nhất của Flagship thì văn bản lable và văn bản gợi ý sẽ hiển thị như thế này
+        // nếu bạn đang sử dụng ít rung hơn thì 1.20. * thì có thể điều này không hoạt động bình thường
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),

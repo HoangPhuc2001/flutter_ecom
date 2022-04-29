@@ -1,5 +1,7 @@
+import 'package:apptest/bloc/quantity_detail/quantity_detail_bloc.dart';
 import 'package:apptest/models/Product.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../models/ColorProduct.dart';
 import 'components/body.dart';

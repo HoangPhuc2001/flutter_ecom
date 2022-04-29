@@ -27,10 +27,10 @@ final RegExp emailValidatorRegExp =
     RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
 const String kEmailNullError = "Vui lòng nhập email của bạn";
 const String kInvalidEmailError = "Vui lòng nhập email hợp lệ";
-const String kPassNullError = "Vui lòng nhập mật khẩu của bạn";
+const String kPassNullError = "Vui lòng không để trống mật khẩu !";
 const String kShortPassError = "Mật khẩu quá ngắn";
 const String kMatchPassError = "Mật khẩu không khớp";
-const String kNamelNullError = "Xin hãy nhập tên của bạn";
+const String kNamelNullError = "Vui lòng không để trống email";
 const String kPhoneNumberNullError = "Xin vui lòng điền số điện thoại của bạn";
 const String kAddressNullError = "Vui lòng nhập địa chỉ của bạn";
 

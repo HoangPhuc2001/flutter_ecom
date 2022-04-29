@@ -1,41 +1,73 @@
+import 'dart:math';
+
+import 'package:apptest/bloc/quantity_detail/cubit/quantity_detail_cubit.dart';
+import 'package:apptest/bloc/quantity_detail/quantity_detail_bloc.dart';
+import 'package:apptest/bloc/quantity_detail/quantity_detail_event.dart';
 import 'package:flutter/material.dart';
 import 'package:apptest/components/rounded_icon_btn.dart';
 import 'package:apptest/models/ColorProduct.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
-class ColorDots extends StatelessWidget {
+class ColorDots extends StatefulWidget {
+  @override
+  _ColorDotsState createState() => _ColorDotsState();
+}
+
+class _ColorDotsState extends State<ColorDots> {
+  // late QuantityDetailBloc _quantityDetailBloc;
+  // int _counter = 0;
+  bool isVisible = false;
+  // Now this is fixed and only for demo
+  int selectedColor = 3;
+
   @override
   Widget build(BuildContext context) {
-    // Now this is fixed and only for demo
-    int selectedColor = 3;
-    return Padding(
-      padding:
-          EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-      child: Row(
-        children: [
-          ...List.generate(
-            demoProducts.length,
-            (index) => ColorDot(
-              color: demoProducts[index].colors[index],
-              isSelected: index == selectedColor,
+    // _quantityDetailBloc = BlocProvider.of<QuantityDetailBloc>(context);
+    return BlocBuilder<QuantityDetailCubit, int>(builder: (context, count) {
+      return Padding(
+        padding:
+            EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+        child: Row(
+          children: [
+            ...List.generate(
+              demoProducts.length,
+              (index) => ColorDot(
+                color: demoProducts[index].colors[index],
+                isSelected: index == selectedColor,
+              ),
             ),
-          ),
-          Spacer(),
-          RoundedIconBtn(
-            icon: Icons.remove,
-            press: () {},
-          ),
-          SizedBox(width: getProportionateScreenWidth(20)),
-          RoundedIconBtn(
-            icon: Icons.add,
-            showShadow: true,
-            press: () {},
-          ),
-        ],
-      ),
-    );
+            Spacer(),
+            Visibility(
+                visible: isVisible,
+                child: RoundedIconBtn(
+                  icon: Icons.remove,
+                  press: () {
+                    context.read<QuantityDetailCubit>().decrement();
+                    if (count <= 1) {
+                      isVisible = false;
+                    }
+                  },
+                )),
+            SizedBox(width: getProportionateScreenWidth(10)),
+            Text('$count', style: Theme.of(context).textTheme.headline5),
+            SizedBox(width: getProportionateScreenWidth(10)),
+            RoundedIconBtn(
+              icon: Icons.add,
+              showShadow: true,
+              press: () {
+                context.read<QuantityDetailCubit>().increment();
+                if (count >= 0) {
+                  isVisible = true;
+                }
+              },
+            ),
+          ],
+        ),
+      );
+    });
   }
 }
 
