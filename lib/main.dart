@@ -44,7 +44,7 @@ class _AppState extends State<MyApp> {
         child: SplashScreen(),
       ),
       // We use routeName so that we dont need to remember the name
-
+      // initialRoute: SplashScreen.routeName,
       routes: routes,
     );
   }
