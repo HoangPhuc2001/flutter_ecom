@@ -1,3 +1,4 @@
+import 'package:apptest/screens/favourite/favourite_screen.dart';
 import 'package:apptest/screens/hive/hive_screen.dart';
 import 'package:apptest/screens/see_more_product/see_more_screen.dart';
 import 'package:flutter/widgets.dart';
@@ -30,4 +31,6 @@ final Map<String, WidgetBuilder> routes = {
   ProfileScreen.routeName: (context) => ProfileScreen(),
   SeeMoreScreen.routeName: (context) => SeeMoreScreen(products: fetchApi()),
   HiveScreen.routeName: (context) => HiveScreen(),
+  FavouriteScreen.routeName: (context) =>
+      FavouriteScreen(products: fetchFavourite()),
 };

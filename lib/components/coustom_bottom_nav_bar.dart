@@ -5,6 +5,7 @@ import 'package:apptest/screens/profile/profile_screen.dart';
 
 import '../constants.dart';
 import '../enums.dart';
+import '../screens/favourite/favourite_screen.dart';
 import '../screens/hive/hive_screen.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
@@ -50,8 +51,15 @@ class CustomBottomNavBar extends StatelessWidget {
                     Navigator.pushNamed(context, HomeScreen.routeName),
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Heart Icon.svg"),
-                onPressed: () {},
+                icon: SvgPicture.asset(
+                  "assets/icons/Heart Icon.svg",
+                  color: MenuState.favourite == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, FavouriteScreen.routeName);
+                },
               ),
               IconButton(
                   icon: SvgPicture.asset(
